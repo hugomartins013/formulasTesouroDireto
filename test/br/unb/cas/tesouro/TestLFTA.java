@@ -8,6 +8,7 @@ import org.junit.Before;
 public class TestLFTA {
 
 	private LFTA lfta;
+	public static double FORMATER_6 = 0.000001d;
 	
 	@Before
 	public void init(){
@@ -18,7 +19,7 @@ public class TestLFTA {
 	public void testValorNominalVNA() {
 		
 		double resultado = lfta.calculaVNA(2,2);
-		assertEquals(resultado, -2.0004879999930996d, 0.0001d);
+		assertEquals(resultado, -2.0004879999930996d, FORMATER_6);
 		
 	}
 		
