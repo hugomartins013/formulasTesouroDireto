@@ -3,31 +3,40 @@ package br.unb.cas.tesouro;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import org.junit.Before;
+
 public class TestLFT {
 
+	private LFT lft;
+	
+	@Before
+	public void init(){
+		lft = new LFT();
+	}
+	
 	@Test
 	public void testValorNominalVNA() {
 		
-//		float resultado = minhaClasse.calculaVNA(vnb,c);
-		double resultado = 0d;
-		assertEquals(resultado, 1f);
+		double resultado = lft.calculaVNA(2,2);
+		assertEquals(resultado, 4d, 0.0001d);
 		
 	}
 	
 	@Test
 	public void testValorNominalC(){
 		
-		float c = 1.11f;
-//		double resultado = minhaClasse.calculaC(taxaSelic);
+		double selic = 1.11d;
+		double resultado = lft.calculaC(selic);
+		assertEquals(resultado, 2.1100000000000003d, 0.0001d);
 	}
 	
 	@Test
 	public void testValorNominalTselic(){
 		
-		float selick = 2.22f;
-//		double resultado = minhaClasse.calculaSelic(selick);
-		double resultado = 0d;
-		assertEquals(resultado, 0.004056d);
+		double selick = 2.22d;
+		double resultado = lft.calculaTSelic(selick);
+		
+		assertEquals(resultado, 0.000001d, 0.0001d);
 	}
 		
 }
