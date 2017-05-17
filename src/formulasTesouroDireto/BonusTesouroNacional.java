@@ -2,9 +2,15 @@ package formulasTesouroDireto;
 
 public class BonusTesouroNacional {
 
-	public double precoUnitario() {
-		// TODO Auto-generated method stub
-		return 0;
+	public static final double TAXA_REFERENCIAL = 1.1;
+	public double valorUnitarioAnt = 10;
+	public double valorUnitarioAt;
+	public int mesAtualizacao;
+	
+	
+	public double precoUnitario(double valorUnitarioAnt) {
+		valorUnitarioAt = TAXA_REFERENCIAL*valorUnitarioAnt;
+		return valorUnitarioAt;
 	}
 
 }

@@ -8,6 +8,8 @@ import formulasTesouroDireto.BonusTesouroNacional;
 
 public class TestBonusTesouroNacional {
 
+	private static final double TAXA_REFERENCIAL = 1.1;
+	public double valorUnitarioAnt = 10;
 	BonusTesouroNacional valorUnitario;
 	
 	@Before
@@ -17,8 +19,8 @@ public class TestBonusTesouroNacional {
 	
 	@Test
 	public void testValorUnitario() {
-		double precoUnitario = valorUnitario.precoUnitario();
-		assertEquals(0, precoUnitario, 0.0001);
+		double precoUnitario = valorUnitario.precoUnitario(valorUnitarioAnt);
+		assertEquals(11, precoUnitario, 0.0001);
 	}
 		
 }
