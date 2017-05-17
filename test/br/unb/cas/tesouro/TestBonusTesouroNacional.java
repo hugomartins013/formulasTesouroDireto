@@ -45,13 +45,13 @@ public class TestBonusTesouroNacional {
 	
 	@Test
 	public void testEqualsJuros() {
-		double juros = valorUnitario.juros();
-		assertEquals(0, juros, 0.0001);
+		double juros = valorUnitario.juros(fatorJuros, valorUnitarioAt);
+		assertEquals(6.6, juros, 0.0001);
 	}
 	
 	@Test
 	public void testNotEqualsJuros() {
-		double juros = valorUnitario.juros();
+		double juros = valorUnitario.juros(fatorJuros, valorUnitarioAt);
 		assertNotEquals(0, juros, 0.0001);
 	}
 		
