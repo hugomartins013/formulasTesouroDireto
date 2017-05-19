@@ -102,37 +102,26 @@ public class TestNotasTesouroNacional {
 	
 	@Test
 	public void testEqualsValorNominalAtualizadoA6() {
-		double valorNominalAtualizadoA6 = valorUnitario.valorNominalAtualizadoA6(3.22, 3.24);
-		assertEquals(993.827160, valorNominalAtualizadoA6, FORMATER_6);
+		double valorNominalAtualizadoA6 = valorUnitario.valorNominalAtualizadoA6(3.22, 3.24, 500);
+		assertEquals(496.913580, valorNominalAtualizadoA6, FORMATER_6);
 	}
 	
 	@Test
 	public void testNotEqualsValorNominalAtualizadoA6() {
-		double valorNominalAtualizadoA6 = valorUnitario.valorNominalAtualizadoA6(3.22, 3.24);
+		double valorNominalAtualizadoA6 = valorUnitario.valorNominalAtualizadoA6(3.22, 3.24, 500);
 		assertNotEquals(1000, valorNominalAtualizadoA6, FORMATER_6);
 	}
 	
-	@Test
-	public void testEqualsFatorJurosA6() {
-		double fatorJurosA6 = valorUnitario.fatorJurosA6(6, 0.06);
-		assertEquals(0.0003, fatorJurosA6, FORMATER_6);
-	}
-	
-	@Test
-	public void testNotEqualsFatorJurosA6() {
-		double fatorJurosA6 = valorUnitario.fatorJurosA6(6, 0.06);
-		assertNotEquals(1, fatorJurosA6, FORMATER_6);
-	}
 	
 	@Test
 	public void testEqualsJurosA6() {
-		double jurosA6 = valorUnitario.jurosA6(993.827160494, 0.0003);
-		assertEquals(0.298148, jurosA6, FORMATER_6);
+		double jurosA6 = valorUnitario.jurosA6(0.277177, 496.913580247);
+		assertEquals(137.733015, jurosA6, FORMATER_6);
 	}
 	
 	@Test
 	public void testNotEqualsJurosA6() {
-		double jurosA6 = valorUnitario.jurosA6(993.827160494, 0.0003);
+		double jurosA6 = valorUnitario.jurosA6(0.277177, 496.913580247);
 		assertNotEquals(300, jurosA6, FORMATER_6);
 	}
 
