@@ -1,6 +1,9 @@
 package br.unb.cas.tesouro;
 
 import org.junit.Test;
+
+import formulasTesouroDireto.LFT;
+
 import static org.junit.Assert.*;
 
 import org.junit.Before;
@@ -9,6 +12,7 @@ public class TestLFT {
 
 	private LFT lft;
 	public static double FORMATER_6 = 0.000001d;
+	public static double FORMATER_8 = 2.1100000000000003d;
 	
 	@Before
 	public void init(){
@@ -28,7 +32,7 @@ public class TestLFT {
 		
 		double selic = 1.11d;
 		double resultado = lft.calculaC(selic);
-		assertEquals(resultado, 2.1100000000000003d, FORMATER_6);
+		assertEquals(resultado, FORMATER_8, FORMATER_6);
 	}
 	
 	@Test

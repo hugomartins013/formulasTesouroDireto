@@ -1,4 +1,4 @@
-package br.unb.cas.tesouro;
+package formulasTesouroDireto;
 
 public class LFTA extends LFT {
 

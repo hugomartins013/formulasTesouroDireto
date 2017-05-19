@@ -1,6 +1,9 @@
 package br.unb.cas.tesouro;
 
 import org.junit.Test;
+
+import formulasTesouroDireto.NTNB;
+
 import static org.junit.Assert.*;
 
 import org.junit.Before;
@@ -8,6 +11,7 @@ import org.junit.Before;
 public class TestNTNB {
 	private NTNB ntnb;
 	public static double FORMATER_6 = 0.000001d;
+	public static double FORMATER_5 = 1.0000000829194273d;
 	
 	@Before
 	public void init(){
@@ -37,7 +41,7 @@ public class TestNTNB {
 	@Test
 	public void testFatorJuros(){
 		double resultado = ntnb.calculaFatorJuros();
-		assertEquals(resultado, 1.0000000829194273d, FORMATER_6);
+		assertEquals(resultado, FORMATER_5, FORMATER_6);
 	}
 	
 	
