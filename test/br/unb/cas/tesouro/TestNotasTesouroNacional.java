@@ -20,7 +20,7 @@ public class TestNotasTesouroNacional {
 	@Test
 	public void testEqualsValorLiquidoTitulo() {
 		double valorLiquidoTitulo = valorUnitario.valorLiquidoTitulo(500.0, 0.035);
-		assertEquals(11, valorLiquidoTitulo, FORMATER_6);
+		assertEquals(17.5, valorLiquidoTitulo, FORMATER_6);
 	}
 	
 	@Test
@@ -32,13 +32,13 @@ public class TestNotasTesouroNacional {
 	@Test
 	public void testEqualsPrecoUnitarioAmortizacao() {
 		double precoUnitarioAmortizacao = valorUnitario.precoUnitarioAmortizacao(3.22, 3.24, 17.5);
-		assertEquals(11, precoUnitarioAmortizacao, FORMATER_6);
+		assertEquals(17.391975, precoUnitarioAmortizacao, FORMATER_6);
 	}
 	
 	@Test
 	public void testNotEqualsPrecoUnitarioAmortizacao() {
 		double precoUnitario = valorUnitario.precoUnitarioAmortizacao(3.22, 3.24, 17.5);
-		assertNotEquals(10, precoUnitario, FORMATER_6);
+		assertNotEquals(20, precoUnitario, FORMATER_6);
 	}
 
 }
