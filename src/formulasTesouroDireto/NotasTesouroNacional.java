@@ -12,6 +12,8 @@ public class NotasTesouroNacional {
 	public double taxaJuros = 0.06;
 	public double fatorJurosNTN;
 	public double jurosNTN;
+	public double valorNominalAtualizadoNTN;
+	public double jurosVNA;
 
 	
 	
@@ -34,5 +36,16 @@ public class NotasTesouroNacional {
 		jurosNTN = precoUnitarioAmortizacao * fatorJurosNTN;
 		return jurosNTN;
 	}
+
+	public double valorNominalAtualizadoNTN(double USSa, double USSb) {
+		valorNominalAtualizadoNTN = (USSa/USSb)*1000;
+		return valorNominalAtualizadoNTN;
+	}
+
+	public double jurosVNA(double valorNominalAtualizadoNTN, double fatorJurosNTN) {
+		jurosVNA = valorNominalAtualizadoNTN * fatorJurosNTN;
+		return jurosVNA;
+	}
+
 
 }

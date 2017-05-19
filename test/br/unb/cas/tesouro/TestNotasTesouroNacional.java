@@ -66,26 +66,26 @@ public class TestNotasTesouroNacional {
 	
 	@Test
 	public void testEqualsValorNominalAtualizadoNTN() {
-		double valorNominalAtualizadoNTN = valorUnitario.valorNominalAtualizadoNTN(1.0, 1,0);
-		assertEquals(4.820669, valorNominalAtualizadoNTN, FORMATER_6);
+		double valorNominalAtualizadoNTN = valorUnitario.valorNominalAtualizadoNTN(3.22, 3.24);
+		assertEquals(993.827160, valorNominalAtualizadoNTN, FORMATER_6);
 	}
 	
 	@Test
 	public void testNotEqualsValorNominalAtualizadoNTN() {
-		double valorNominalAtualizadoNTN = valorUnitario.valorNominalAtualizadoNTN(1.0, 1.0);
-		assertNotEquals(20, valorNominalAtualizadoNTN, FORMATER_6);
+		double valorNominalAtualizadoNTN = valorUnitario.valorNominalAtualizadoNTN(3.22, 3.24);
+		assertNotEquals(1000, valorNominalAtualizadoNTN, FORMATER_6);
 	}
 	
 	@Test
 	public void testEqualsJurosVNA() {
-		double jurosVNA = valorUnitario.jurosVNA(1.0, 1,0);
-		assertEquals(4.820669, jurosVNA, FORMATER_6);
+		double jurosVNA = valorUnitario.jurosVNA(993.827160494, 0.277177);
+		assertEquals(275.466030, jurosVNA, FORMATER_6);
 	}
 	
 	@Test
 	public void testNotEqualsJurosVNA() {
-		double jurosVNA = valorUnitario.jurosVNA(1.0, 1,0);
-		assertNotEquals(20, jurosVNA, FORMATER_6);
+		double jurosVNA = valorUnitario.jurosVNA(1.0, 1.0);
+		assertNotEquals(300, jurosVNA, FORMATER_6);
 	}
 	
 
