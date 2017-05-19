@@ -10,10 +10,12 @@ public class NotasTesouroNacional {
 	public int dataPagamentoAtual = 130;
 	public int dataPagamentoAnterior = 30;
 	public double taxaJuros = 0.06;
+	public int mesJuros = 6;
 	public double fatorJurosNTN;
 	public double jurosNTN;
 	public double valorNominalAtualizadoNTN;
 	public double jurosVNA;
+	public double fatorJurosVNA;
 
 	
 	
@@ -45,6 +47,11 @@ public class NotasTesouroNacional {
 	public double jurosVNA(double valorNominalAtualizadoNTN, double fatorJurosNTN) {
 		jurosVNA = valorNominalAtualizadoNTN * fatorJurosNTN;
 		return jurosVNA;
+	}
+
+	public double fatorJurosVNA(int taxaJuros, double mesJuros) {
+		fatorJurosVNA = ((taxaJuros/100.0)*(mesJuros/12.0));
+		return fatorJurosVNA;
 	}
 
 

@@ -84,7 +84,7 @@ public class TestNotasTesouroNacional {
 	
 	@Test
 	public void testNotEqualsFatorJurosVNA() {
-		double FatorJurosVNA = valorUnitario.fatorJurosVNA(16, 0.06);
+		double fatorJurosVNA = valorUnitario.fatorJurosVNA(6, 0.06);
 		assertNotEquals(1, fatorJurosVNA, FORMATER_6);
 	}
 	
