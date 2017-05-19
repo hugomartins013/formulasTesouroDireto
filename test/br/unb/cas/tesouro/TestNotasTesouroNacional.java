@@ -77,14 +77,26 @@ public class TestNotasTesouroNacional {
 	}
 	
 	@Test
+	public void testEqualsFatorJurosVNA() {
+		double fatorJurosVNA = valorUnitario.fatorJurosVNA(6, 0.06);
+		assertEquals(0.0003, fatorJurosVNA, FORMATER_6);
+	}
+	
+	@Test
+	public void testNotEqualsFatorJurosVNA() {
+		double FatorJurosVNA = valorUnitario.fatorJurosVNA(16, 0.06);
+		assertNotEquals(1, fatorJurosVNA, FORMATER_6);
+	}
+	
+	@Test
 	public void testEqualsJurosVNA() {
-		double jurosVNA = valorUnitario.jurosVNA(993.827160494, 0.277177);
-		assertEquals(275.466030, jurosVNA, FORMATER_6);
+		double jurosVNA = valorUnitario.jurosVNA(993.827160494, 0.0003);
+		assertEquals(0.298148, jurosVNA, FORMATER_6);
 	}
 	
 	@Test
 	public void testNotEqualsJurosVNA() {
-		double jurosVNA = valorUnitario.jurosVNA(1.0, 1.0);
+		double jurosVNA = valorUnitario.jurosVNA(993.827160494, 0.0003);
 		assertNotEquals(300, jurosVNA, FORMATER_6);
 	}
 	
