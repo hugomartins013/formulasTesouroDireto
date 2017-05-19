@@ -17,13 +17,13 @@ public class TestLetrasTesouroNacional {
 	}
 
 	@Test
-	public void testEqualsPrecoUNitario() {
+	public void testEqualsPrecoUnitario() {
 		double precoUnitarioLTN = precoUnitario.precoUnitarioLTN(10.22);
 		assertEquals(990.451836, precoUnitarioLTN, FORMATER_6);
 	}
 	
 	@Test
-	public void testNotEqualsPrecoUNitario() {
+	public void testNotEqualsPrecoUnitario() {
 		double precoUnitarioLTN = precoUnitario.precoUnitarioLTN(10.22);
 		assertNotEquals(11, precoUnitarioLTN, FORMATER_6);
 	}

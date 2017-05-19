@@ -7,8 +7,8 @@ public class BonusTesouroNacional {
 	public double juros;
 	public double valorUnitarioAnt = 10;
 	public double valorUnitarioAt = 11;
-	public double mesAtualizacao = 6;
-	public double fatorJuros = 0.6;
+	public int mesAtualizacao = 6;
+	public double fatorJuros;
 	public int quantidade = 5;
 	public double valorPrincipal;
 	
