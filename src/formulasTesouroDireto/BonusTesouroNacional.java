@@ -2,21 +2,21 @@ package formulasTesouroDireto;
 
 
 public class BonusTesouroNacional {
-	public static final double TAXA_REFERENCIAL = 1.1;
-	public static final double TAXA_JUROS = 0.6;
-	public double valorUnitarioAnt = 10;
-	public int mesAtualizacao = 6;
-	public double valorUnitarioAt;
-	public double fatorJuros;
+	public double taxaReferencial = 1.1;
+	public double taxaJuros = 0.06;
 	public double juros;
+	public double valorUnitarioAnt = 10;
+	public double valorUnitarioAt = 11;
+	public double mesAtualizacao = 6;
+	public double fatorJuros = 0.6;
 	
 	public double precoUnitario(double valorUnitarioAnt) {
-		valorUnitarioAt = TAXA_REFERENCIAL*valorUnitarioAnt;
+		valorUnitarioAt = taxaReferencial*valorUnitarioAnt;
 		return valorUnitarioAt;
 	}
 
-	public double fatorJuros() {
-		fatorJuros = (Math.pow((1+ (TAXA_JUROS/100)), (mesAtualizacao/12)) -1);
+	public double fatorJuros(double taxaJuros, double mesAtualizacao) {
+		fatorJuros = (Math.pow((1+ (taxaJuros/100)), (mesAtualizacao/12)) -1);
 		return fatorJuros;
 	}
 	
