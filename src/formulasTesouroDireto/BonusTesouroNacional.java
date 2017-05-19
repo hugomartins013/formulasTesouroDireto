@@ -9,6 +9,8 @@ public class BonusTesouroNacional {
 	public double valorUnitarioAt = 11;
 	public double mesAtualizacao = 6;
 	public double fatorJuros = 0.6;
+	public int quantidade = 5;
+	public double valorPrincipal;
 	
 	public double precoUnitario(double valorUnitarioAnt) {
 		valorUnitarioAt = taxaReferencial*valorUnitarioAnt;
@@ -23,6 +25,11 @@ public class BonusTesouroNacional {
 	public double juros(double fatorJuros, double valorUnitarioAt) {
 		juros = fatorJuros * valorUnitarioAt;
 		return juros;
+	}
+	
+	public double valorPrincipal(double valorUnitarioAt, double quantidade) {
+		valorPrincipal = valorUnitarioAt * quantidade;
+		return valorPrincipal;
 	}
 	
 }
