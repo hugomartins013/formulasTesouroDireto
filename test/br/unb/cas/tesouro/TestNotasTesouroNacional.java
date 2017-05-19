@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import formulasTesouroDireto.BonusTesouroNacional;
 import formulasTesouroDireto.NotasTesouroNacional;
 
 public class TestNotasTesouroNacional {
@@ -43,27 +42,27 @@ public class TestNotasTesouroNacional {
 	
 	@Test
 	public void testEqualsFatorJurosNTN() {
-		double fatorJurosNTN = valorUnitario.precoUnitarioAmortizacao(130, 30, 0.06);
+		double fatorJurosNTN = valorUnitario.fatorJurosNTN(130, 30, 0.06);
 		assertEquals(0.277177, fatorJurosNTN, FORMATER_6);
 	}
 	
 	@Test
 	public void testNotEqualsFatorJurosNTN() {
-		double fatorJurosNTN = valorUnitario.precoUnitarioAmortizacao(130, 30, 0.06);
+		double fatorJurosNTN = valorUnitario.fatorJurosNTN(130, 30, 0.06);
 		assertNotEquals(1, fatorJurosNTN, FORMATER_6);
 	}
 	
 	@Test
 	public void testEqualsJurosNTN() {
-		double jurosNTN = valorUnitario.jurosNTN(17.391975, 0.277177);
-		assertEquals(17.391975, fatorJurosNTN, FORMATER_6);
+		double jurosNTN = valorUnitario.jurosNTN(17.391975308641975, 0.2771777777777778);
+		assertEquals(4.820669, jurosNTN, FORMATER_6);
 	}
 	
 	@Test
 	public void testNotEqualsJurosNTN() {
 		double jurosNTN = valorUnitario.jurosNTN(17.391975, 0.277177);
-		assertNotEquals(20, precoUnitario, FORMATER_6);
-	
+		assertNotEquals(20, jurosNTN, FORMATER_6);
+	}
 	
 
 }
