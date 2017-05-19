@@ -40,5 +40,30 @@ public class TestNotasTesouroNacional {
 		double precoUnitario = valorUnitario.precoUnitarioAmortizacao(3.22, 3.24, 17.5);
 		assertNotEquals(20, precoUnitario, FORMATER_6);
 	}
+	
+	@Test
+	public void testEqualsFatorJurosNTN() {
+		double fatorJurosNTN = valorUnitario.precoUnitarioAmortizacao(130, 30, 0.06);
+		assertEquals(0.277177, fatorJurosNTN, FORMATER_6);
+	}
+	
+	@Test
+	public void testNotEqualsFatorJurosNTN() {
+		double fatorJurosNTN = valorUnitario.precoUnitarioAmortizacao(130, 30, 0.06);
+		assertNotEquals(1, fatorJurosNTN, FORMATER_6);
+	}
+	
+	@Test
+	public void testEqualsJurosNTN() {
+		double jurosNTN = valorUnitario.jurosNTN(17.391975, 0.277177);
+		assertEquals(17.391975, fatorJurosNTN, FORMATER_6);
+	}
+	
+	@Test
+	public void testNotEqualsJurosNTN() {
+		double jurosNTN = valorUnitario.jurosNTN(17.391975, 0.277177);
+		assertNotEquals(20, precoUnitario, FORMATER_6);
+	
+	
 
 }
