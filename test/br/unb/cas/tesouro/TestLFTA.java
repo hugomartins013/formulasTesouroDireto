@@ -21,7 +21,6 @@ public class TestLFTA {
 	
 	@Test
 	public void testValorNominalVNA() {
-		
 		double resultado = lfta.calculaVNA(2,2);
 		assertEquals(resultado, FORMATER_7, FORMATER_6);
 		
@@ -29,7 +28,6 @@ public class TestLFTA {
 	
 	@Test
 	public void testNotValorNominalVNA() {
-		
 		double resultado = lfta.calculaVNA(2,2);
 		assertNotEquals(resultado, 1000, FORMATER_6);
 		double resultadoTest2 = lfta.calculaVNA(2,2);

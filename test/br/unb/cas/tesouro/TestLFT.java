@@ -38,7 +38,6 @@ public class TestLFT {
 	
 	@Test
 	public void testValorNominalC(){
-		
 		double selic = 1.11d;
 		double resultado = lft.calculaC(selic);
 		assertEquals(resultado, FORMATER_8, FORMATER_6);
@@ -46,7 +45,6 @@ public class TestLFT {
 	
 	@Test
 	public void testNotValorNominalC(){
-		
 		double selic = 1.11d;
 		double resultado = lft.calculaC(selic);
 		assertNotEquals(resultado, 10000, FORMATER_6);
@@ -56,16 +54,13 @@ public class TestLFT {
 	
 	@Test
 	public void testValorNominalTselic(){
-		
 		double selick = 2.22d;
 		double resultado = lft.calculaTSelic(selick);
-		
 		assertEquals(resultado, FORMATER_6, 0.0001d);
 	}
 	
 	@Test
 	public void testNotValorNominalTselic(){
-		
 		double selick = 2.22d;
 		double resultado = lft.calculaTSelic(selick);
 		assertNotEquals(resultado, 10001, 0.0001d);
