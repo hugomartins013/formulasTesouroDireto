@@ -86,6 +86,8 @@ public class TestNotasTesouroNacional {
 	public void testNotEqualsFatorJurosVNA() {
 		double fatorJurosVNA = valorUnitario.fatorJurosVNA(6, 0.06);
 		assertNotEquals(1, fatorJurosVNA, FORMATER_6);
+		double fatorJurosVNATest2 = valorUnitario.fatorJurosVNA(6, 0.06);
+		assertNotEquals(0.0004, fatorJurosVNATest2, FORMATER_6);
 	}
 	
 	@Test
@@ -110,6 +112,8 @@ public class TestNotasTesouroNacional {
 	public void testNotEqualsValorNominalAtualizadoA6() {
 		double valorNominalAtualizadoA6 = valorUnitario.valorNominalAtualizadoA6(3.22, 3.24, 500);
 		assertNotEquals(1, valorNominalAtualizadoA6, FORMATER_6);
+		double valorNominalAtualizadoA6Test2 = valorUnitario.valorNominalAtualizadoA6(3.22, 3.24, 500);
+		assertNotEquals(496.913579, valorNominalAtualizadoA6Test2, FORMATER_6);
 	}
 	
 	
@@ -123,6 +127,8 @@ public class TestNotasTesouroNacional {
 	public void testNotEqualsJurosA6() {
 		double jurosA6 = valorUnitario.jurosA6(0.277177, 496.913580247);
 		assertNotEquals(1, jurosA6, FORMATER_6);
+		double jurosA6Test2 = valorUnitario.jurosA6(0.277177, 496.913580247);
+		assertNotEquals(137.733014, jurosA6Test2, FORMATER_6);
 	}
 
 }
