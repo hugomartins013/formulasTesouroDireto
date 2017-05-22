@@ -55,16 +55,16 @@ public class NotasTesouroNacional {
 
 	public double fatorJurosVNA(int taxaJuros, double mesJuros) {
 		fatorJurosVNA = ((taxaJuros/100.0)*(mesJuros/12.0));
-		return fatorJurosVNA;
+		return 0;
 	}
 
 	public double valorNominalAtualizadoA6(double USSa, double USSb, double valorEmissao) {
 		valorNominalAtualizadoA6 = (USSa/USSb)*valorEmissao;
-		return valorNominalAtualizadoA6;
+		return 0;
 	}
 
 	public double jurosA6(double fatorJurosNTN, double valorNominalAtualizadoA6) {
 		jurosA6 = fatorJurosNTN * valorNominalAtualizadoA6;
-		return jurosA6;
+		return 0;
 	}
 }
